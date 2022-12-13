@@ -2,7 +2,7 @@
 
 <h3>
     Mission Name:
-    <span *ngIf="!editingMission; else editMissionBlock">
+    <span *ngIf="editingMission; else editMissionBlock">
         <span class="editable-text" (click)="editingMission = true;">{{ missionName }}</span>
     </span>
     <ng-template #editMissionBlock>
@@ -10,5 +10,6 @@
         <button (click)="updateMission(mission.value)">save</button>
     </ng-template>
 </h3>
+
 
 <h3>Carrier Rocket: {{ rocketName }}</h3>
